@@ -49,18 +49,34 @@ class _GrauOnePageState extends State<GrauOnePage> {
                   width: 400,
                   height: 550,
                   decoration: BoxDecoration(
-                    gradient: const RadialGradient(
-                      center: Alignment(0, 0),
-                      radius: 0.8,
-                      colors: <Color>[
-                        Color.fromRGBO(252, 118, 67, 100),
-                        Color.fromARGB(255, 255, 255, 255),
-                      ],
-                      stops: <double>[1, 1.0],
-                    ),
+                    color: const Color.fromRGBO(252, 118, 67, 100),
                     borderRadius: BorderRadius.circular(30),
-                    color: const Color.fromARGB(255, 235, 210, 163),
                   ),
+                  padding: const EdgeInsets.all(8),
+                  child: Column(children: [
+                    Text("Obesidade Grau 1 (Obesidade Moderada)",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.abrilFatface(
+                            fontSize: 14,
+                            color: const Color.fromARGB(255, 255, 255, 255))),
+                    Text(
+                        "\nObesidade moderada. Isso significa que há um excesso significativo de gordura corporal em relação ao músculo e pode aumentar o risco de várias condições de saúde, incluindo diabetes tipo 2, doenças cardíacas, apneia do sono e hipertensão.",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.abrilFatface(
+                            fontSize: 12,
+                            color: const Color.fromARGB(255, 255, 255, 255))),
+                    Text("\nRecomendações:",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.abrilFatface(
+                            fontSize: 14,
+                            color: const Color.fromARGB(255, 255, 255, 255))),
+                    Text(
+                        "\nConsulta a um Profissional de Saúde: Consulte um médico ou um especialista em obesidade para avaliar os riscos à saúde e criar um plano de gerenciamento personalizado.\n\nAlimentação Saudável: Adote uma dieta equilibrada que inclua alimentos ricos em nutrientes, como frutas, vegetais, proteínas magras, grãos integrais e gorduras saudáveis. Evite alimentos processados, açúcares refinados e gorduras saturadas.\n\nAtividade Física Regular: Inclua exercícios físicos regularmente em sua rotina, incluindo atividades aeróbicas e treinamento de força, para ajudar a queimar calorias e melhorar a saúde cardiovascular.\n\nApoio Psicológico e Comportamental: Considere a terapia comportamental para lidar com questões emocionais e comportamentais relacionadas à alimentação e ao peso.\n\nPlano de Gerenciamento da Obesidade: Trabalhe com um médico, nutricionista e/ou treinador físico para desenvolver um plano de gerenciamento da obesidade que inclua metas realistas de perda de peso e um cronograma.",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.abrilFatface(
+                            fontSize: 12,
+                            color: const Color.fromARGB(255, 255, 255, 255))),
+                  ]),
                 ),
               ],
             ),

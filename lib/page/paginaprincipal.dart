@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   var nome = "";
   var sexo = "";
   double altura = 0;
-  int peso1 = 0;
+  double peso1 = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.all(3),
                         child: TextField(
                           onChanged: (value) {
-                            if (value.trim().length > 4) {
+                            if (value.trim().length > 3) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
                                       content: Text(
@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                               return;
                             }
                             setState(() {
-                              peso1 = int.parse(value);
+                              peso1 = double.parse(value);
                             });
                           },
                           decoration: const InputDecoration(
@@ -204,7 +204,7 @@ class _HomePageState extends State<HomePage> {
                       Expanded(child: Container()),
                       TextButton(
                         onPressed: () {
-                          double retorno = peso1 / (altura * altura);
+                          double retorno = peso1 / ((altura * altura) / 10000);
                           switch (retorno) {
                             case <= 16:
                               Navigator.push(

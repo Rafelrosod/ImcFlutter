@@ -49,18 +49,40 @@ class _NormalPageState extends State<NormalPage> {
                   width: 400,
                   height: 550,
                   decoration: BoxDecoration(
-                    gradient: const RadialGradient(
-                      center: Alignment(0, 0),
-                      radius: 0.8,
-                      colors: <Color>[
-                        Color.fromRGBO(252, 118, 67, 100),
-                        Color.fromARGB(255, 255, 255, 255),
-                      ],
-                      stops: <double>[1, 1.0],
-                    ),
+                    color: const Color.fromRGBO(252, 118, 67, 100),
                     borderRadius: BorderRadius.circular(30),
-                    color: const Color.fromARGB(255, 235, 210, 163),
                   ),
+                  padding: const EdgeInsets.all(8),
+                  child: Column(children: [
+                    Text(
+                      "Normal (Peso Saudável)",
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.abrilFatface(
+                          fontSize: 14,
+                          color: const Color.fromARGB(255, 255, 255, 255)),
+                    ),
+                    Text(
+                      "\nTer um IMC na faixa 'Normal' significa que a pessoa está dentro do peso considerado saudável para sua altura e idade. Isso indica que a quantidade de gordura corporal está dentro de uma faixa considerada saudável para a maioria das pessoas e está associada a um menor risco de doenças relacionadas ao peso, como diabetes e doenças cardíacas.",
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.abrilFatface(
+                          fontSize: 12,
+                          color: const Color.fromARGB(255, 255, 255, 255)),
+                    ),
+                    Text(
+                      "\nRecomendações:",
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.abrilFatface(
+                          fontSize: 14,
+                          color: const Color.fromARGB(255, 255, 255, 255)),
+                    ),
+                    Text(
+                      "\nAlimentação Equilibrada:Mantenha uma dieta rica em frutas, vegetais, proteínas magras e grãos integrais. Evite excessos de alimentos processados, açúcares refinados e gorduras saturadas.\n\nAtividade Física Regular:Mantenha um programa de exercícios que inclua atividades aeróbicas, treinamento de força e flexibilidade. Isso ajuda a manter a massa muscular, a saúde cardiovascular e a queima de calorias\n\nExames de Saúde Regulares:Continue a fazer exames de saúde regulares para monitorar o bem-estar geral e detectar precocemente quaisquer problemas de saúde.\n\nHidratação Adequada:Mantenha-se bem hidratado, bebendo água suficiente ao longo do dia.\n\nDescanso Adequado:Priorize o sono adequado, pois o sono insuficiente pode afetar negativamente o peso e a saúde em geral.\n\nÉ importante enfatizar que manter um peso saudável é apenas um aspecto da saúde geral. O bem-estar inclui outros fatores, como a saúde mental, a qualidade de vida e a prevenção de doenças. ",
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.abrilFatface(
+                          fontSize: 12,
+                          color: const Color.fromARGB(255, 255, 255, 255)),
+                    ),
+                  ]),
                 ),
               ],
             ),
